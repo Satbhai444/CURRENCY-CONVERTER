@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <div class="card">
+    <button id="themeToggle">🌗 Theme</button>
+    <button id="langToggle">🌐 Switch Language</button>
+    <h2 id="title">Currency Converter</h2>
+    <div class="converter">
+      <div class="row">
+        <img id="from-flag" class="flag" />
+        <select id="from"></select>
+      </div>
+      <div class="row">
+        <img id="to-flag" class="flag" />
+        <select id="to"></select>
+      </div>
+      <input type="number" id="amount" placeholder="Enter amount" />
+      <button id="convert">Convert</button>
+      <div id="result"></div>
+      <canvas id="trendChart" height="100"></canvas>
+    </div>
+  </div>
+
+  <div class="bg-picker">
+    <h3 id="bgLabel">🎨 Choose Background</h3>
+    <div class="bg-options">
+      <div class="bg-thumb" data-bg="1"></div>
+      <div class="bg-thumb" data-bg="2"></div>
+      <div class="bg-thumb" data-bg="3"></div>
+      <div class="bg-thumb" data-bg="4"></div>
+      <div class="bg-thumb" data-bg="5"></div>
+    </div>
+    <input type="file" id="bgUpload" accept="image/*" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

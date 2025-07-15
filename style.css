@@ -1,0 +1,183 @@
+body {
+  background: url('https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: 0.4s;
+  flex-direction: column;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  z-index: 10;
+}
+
+.converter .row {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+select,
+input[type="number"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #007aff;
+  color: white;
+  cursor: pointer;
+  margin: 10px 5px 0;
+}
+
+.flag {
+  width: 40px;
+  height: 25px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.bg-picker {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 10px 15px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  font-size: 0.95rem;
+  color: #000;
+}
+
+.bg-options {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.bg-thumb {
+  width: 35px;
+  height: 35px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+  background-size: cover;
+}
+
+.bg-thumb:hover {
+  border-color: #007aff;
+}
+
+.bg-thumb[data-bg="1"] {
+  background-image: url('https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&w=1920&q=80');
+}
+
+.bg-thumb[data-bg="2"] {
+  background-image: url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1920&q=80');
+}
+
+.bg-thumb[data-bg="3"] {
+  background-image: url('https://images.unsplash.com/photo-1496309732348-3627f3f040ee?auto=format&fit=crop&w=1920&q=80');
+}
+
+.bg-thumb[data-bg="4"] {
+  background-image: url('https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?auto=format&fit=crop&w=1920&q=80');
+}
+
+.bg-thumb[data-bg="5"] {
+  background: linear-gradient(135deg, #2b5876, #4e4376);
+}
+
+#bgUpload {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  padding: 4px;
+}
+
+#result {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  word-wrap: break-word;
+}
+
+#trendChart {
+  margin-top: 20px;
+  width: 100% !important;
+  max-height: 180px;
+}
+
+body.dark {
+  color: #ddd;
+}
+
+body.dark .card {
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+body.dark select,
+body.dark input,
+body.dark button {
+  background: #222;
+  color: #fff;
+}
+
+body.dark .bg-picker {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .card {
+    padding: 1.2rem;
+  }
+
+  button {
+    width: 100%;
+    margin: 8px 0 0;
+  }
+
+  .converter .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  select, input[type="number"] {
+    margin: 5px 0 0;
+    width: 100%;
+  }
+
+  .bg-picker {
+    position: static;
+    margin-top: 20px;
+  }
+}
